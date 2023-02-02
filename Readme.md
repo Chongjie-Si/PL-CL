@@ -1,3 +1,5 @@
+### Complementary Classifier Induced Partial Label Learning
+
 1.   Directory structure
 
      1.   Code
@@ -16,4 +18,4 @@
 
 3.   Data set
 
-     We provide all the data sets used in this paper.
+     We provide the data sets used in this paper.
