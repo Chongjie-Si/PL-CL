@@ -1,7 +1,7 @@
 ### Complementary Classifier Induced Partial Label Learning
 Matlab Implementation
 
-KDD 2023, submission id: 77
+KDD 2023
 
 1.   Directory structure
 
