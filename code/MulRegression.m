@@ -1,4 +1,4 @@
-function [train_outputs, train_outputs1, test_outputs, test_outputs1] = MulRegression_PLCL(train_data, train_p_target, q, test_data, lambda, al, par, ker)
+function [train_outputs, train_outputs_com, test_outputs, test_outputs_com] = MulRegression(train_data, train_p_target, q, test_data, lambda, al, par, ker)
 [m, ~] = size(train_data);
 [t, ~] = size(test_data);
 
@@ -19,9 +19,9 @@ b1 = s1*q / (s1*m1);
 alpha1 = H1 \ (q-repmat(b1, m, 1));
 
 train_outputs = 1/(2*lambda)*K*alpha+repmat(b, m, 1);
-train_outputs1 = al/(2*lambda)*K*alpha1+repmat(b1, m, 1);
+train_outputs_com = al/(2*lambda)*K*alpha1+repmat(b1, m, 1);
 test_outputs = 1/(2*lambda)*Kt*alpha+repmat(b, t, 1);
-test_outputs1 = al/(2*lambda)*Kt*alpha1+repmat(b1, t, 1);
+test_outputs_com = al/(2*lambda)*Kt*alpha1+repmat(b1, t, 1);
 
 
 end

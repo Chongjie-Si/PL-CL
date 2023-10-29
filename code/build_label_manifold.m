@@ -4,8 +4,7 @@ train_data = normr(train_data);
 kdtree = KDTreeSearcher(train_data);
 [neighbor,~] = knnsearch(kdtree,train_data,'k',k+1);
 neighbor = neighbor(:,2:k+1);
-options = optimoptions('quadprog',...
-'Display', 'off','Algorithm','interior-point-convex' );
+options = optimoptions('quadprog','Display', 'off','Algorithm','interior-point-convex' );
 W = zeros(p,p);
 fprintf('Obtain graph matrix W...\n');
 for i = 1:p
